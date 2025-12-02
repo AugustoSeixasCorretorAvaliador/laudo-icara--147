@@ -1,155 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Verificação de Autenticidade – Laudo Avaliação</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Autenticação – Laudo de Avaliação Imobiliária | Augusto Seixas CRECI 105921-F</title>
+
+<meta name="description" content="Sistema de autenticação de Laudo de Avaliação Imobiliária emitido por Augusto Seixas – Avaliador Imobiliário CRECI-RJ 105921-F. Validação online via QR Code.">
+<meta name="author" content="Augusto Seixas">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Autenticação – Laudo de Avaliação Imobiliária">
+<meta property="og:description" content="Validação digital de laudo técnico de avaliação imobiliária com segurança e QR Code.">
+<meta property="og:type" content="website">
 
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f4f6f9;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f6f8;
         margin: 0;
         padding: 0;
+        color: #333;
     }
 
     .container {
         max-width: 900px;
         margin: 40px auto;
-        background: white;
-        padding: 30px;
+        background: #fff;
+        padding: 40px;
         border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 25px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
-        color: #003366;
-        margin-bottom: 10px;
+    h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #1a3d7c;
+        text-align: center;
     }
 
-    .input-group {
-        margin-bottom: 20px;
-    }
-
-    input[type="password"] {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
-    }
-
-    button {
-        background: #003366;
-        color: white;
-        padding: 12px 18px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        width: 100%;
-    }
-
-    button:hover {
-        background: #002244;
+    h2 {
+        font-size: 20px;
+        margin-top: 25px;
+        border-left: 4px solid #1a3d7c;
+        padding-left: 10px;
     }
 
     .box {
-        background: #eef3f9;
-        border-left: 4px solid #003366;
+        background: #f9fbff;
+        border: 1px solid #dce6f5;
         padding: 15px;
-        margin-top: 25px;
-        border-radius: 6px;
-    }
-
-    .success {
-        color: #0a8020;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    a.pdf-btn {
-        display: inline-block;
+        border-radius: 8px;
         margin-top: 10px;
-        background: #003366;
-        padding: 14px;
-        border-radius: 6px;
-        color: white;
-        text-decoration: none;
-        font-size: 17px;
     }
 
-    a.pdf-btn:hover {
-        background: #002244;
+    .label {
+        font-weight: bold;
+        color: #1a3d7c;
+    }
+
+    .download-btn {
+        display: block;
+        background: #1a3d7c;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .download-btn:hover {
+        background: #16346a;
+    }
+
+    footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 13px;
+        color: #777;
     }
 </style>
 
-<script>
-function validarLaudo() {
-    const senha = document.getElementById("senha").value;
-
-    if (senha === "147") {
-        document.getElementById("resultado").style.display = "block";
-        document.getElementById("erro").style.display = "none";
-    } else {
-        document.getElementById("erro").style.display = "block";
-        document.getElementById("resultado").style.display = "none";
-    }
-}
-</script>
-
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Verificação de Autenticidade – Laudo de Avaliação</h1>
 
-    <div class="input-group">
-        <label>Digite a senha de verificação:</label>
-        <input type="password" id="senha" placeholder="Digite a senha">
-    </div>
+<h1>Verificação de Autenticidade</h1>
+<p style="text-align:center; color:#555;">Laudo de Avaliação Imobiliária</p>
 
-    <button onclick="validarLaudo()">Validar</button>
+<h2>Dados do Avaliador</h2>
+<div class="box">
+    <p><span class="label">Nome:</span> José Augusto dos Santos Seixas</p>
+    <p><span class="label">Registro:</span> Avaliador Imobiliário – CRECI-RJ 105921-F</p>
+    <p><span class="label">Formação Complementar:</span> Curso CRECI Ed.310 – Avaliação Imobiliária</p>
+</div>
 
-    <p id="erro" style="display:none; color:red; margin-top:15px;">
-        ❌ Senha incorreta. Tente novamente.
-    </p>
+<h2>Dados do Laudo</h2>
+<div class="box">
+    <p><span class="label">Identificação:</span> LAUDO-ICARAÍ-147-2025-SPOLETO</p>
+    <p><span class="label">Senha de Validação:</span> 147</p>
+    <p><span class="label">Status:</span> ✔ Documento Autenticado</p>
+</div>
 
-    <!-- RESULTADO -->
-    <div id="resultado" style="display:none;">
-        <p class="success">✔ Laudo Validado com Sucesso</p>
+<h2>Conclusão Técnica (Resumo)</h2>
+<div class="box">
+    <p><strong>Valor Locatício Justo:</strong> R$ 14.000 a R$ 17.500</p>
+    <p><strong>Valor Máximo Técnico:</strong> R$ 18.000</p>
+    <p>Reajuste para R$ 30.000 é desproporcional e sem base técnica.</p>
+</div>
 
-        <div class="box">
-            <h2>Dados do Avaliador</h2>
-            <p><b>José Augusto dos Santos Seixas</b><br>
-            Avaliador Imobiliário – CRECI-RJ 105921-F<br>
-            Especialista em Avaliação - (CRECI Ed.310)</p>
-        </div>
+<a href="Laudo_Avaliacao_Jose_Augusto.pdf" class="download-btn">
+📄 Baixar Laudo de Avaliação Completo (PDF)
+</a>
 
-        <div class="box">
-            <h2>Dados do Laudo</h2>
-            <p><b>Número:</b> LAUDO-ICARAÍ-147-2025-SPOLETO<br>
-               <b>Imóvel Avaliado:</b> Loja térrea – Rua Gen. Pereira da Silva, 147 – Icaraí – Niterói/RJ<br>
-               <b>Ano:</b> 2025</p>
-        </div>
-
-        <div class="box">
-            <h2>Conclusão  (Resumo)</h2>
-
-            <p><b>Valor locativo justo (2025):</b> R$ 14.000 a R$ 17.500</p>
-            <p><b>Valor máximo técnico recomendável:</b> R$ 18.000</p>
-
-            <p><b>Tentativa de reajuste para R$ 30.000:</b><br>
-            O valor pleiteado pelo proprietário, manifestado na intenção de majorar de forma incompatível o valor do aluguel, produziria o efeito econômico de antecipar e compensar impactos tributários futuros.</p>
-        </div>
-
-        <div class="box">
-            <h2>Download do Laudo em PDF</h2>
-            <a class="pdf-btn" href="Laudo_Avaliacao_Jose_Augusto.pdf" target="_blank">
-                📄 Baixar Laudo de Avaliação Completo (PDF)
-            </a>
-        </div>
-    </div>
+<footer>
+    Sistema de Autenticação – Augusto Seixas © 2025
+</footer>
 
 </div>
 
