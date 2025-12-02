@@ -4,14 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Autenticação – Laudo de Avaliação Imobiliária | Augusto Seixas CRECI 105921-F</title>
+<title>Autenticação – Laudo de Avaliação Imobiliária</title>
 
-<meta name="description" content="Sistema de autenticação de Laudo de Avaliação Imobiliária emitido por Augusto Seixas – Avaliador Imobiliário CRECI-RJ 105921-F. Validação online via QR Code.">
-<meta name="author" content="Augusto Seixas">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Autenticação – Laudo de Avaliação Imobiliária">
-<meta property="og:description" content="Validação digital de laudo técnico de avaliação imobiliária com segurança e QR Code.">
-<meta property="og:type" content="website">
+<meta name="author" content="Augusto Seixas">
+<meta name="description" content="Sistema de autenticação de Laudo de Avaliação Imobiliária emitido por Augusto Seixas – Avaliador Imobiliário CRECI-RJ 105921-F.">
 
 <style>
     body {
@@ -32,18 +29,11 @@
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 700;
         margin-bottom: 5px;
-        color: #1a3d7c;
         text-align: center;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin-top: 25px;
-        border-left: 4px solid #1a3d7c;
-        padding-left: 10px;
+        color: #1a3d7c;
     }
 
     .box {
@@ -54,9 +44,36 @@
         margin-top: 10px;
     }
 
-    .label {
+    label {
         font-weight: bold;
         color: #1a3d7c;
+    }
+
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        background: #1a3d7c;
+        color: #fff;
+        font-size: 18px;
+        padding: 14px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover { background: #16346a; }
+
+    .hidden {
+        display: none;
     }
 
     .download-btn {
@@ -76,6 +93,13 @@
         background: #16346a;
     }
 
+    h2 {
+        font-size: 20px;
+        margin-top: 25px;
+        border-left: 4px solid #1a3d7c;
+        padding-left: 10px;
+    }
+
     footer {
         margin-top: 40px;
         text-align: center;
@@ -83,6 +107,22 @@
         color: #777;
     }
 </style>
+
+<script>
+function validarSenha() {
+    const senha = document.getElementById("senha").value;
+    const conteudo = document.getElementById("conteudo");
+    const erro = document.getElementById("erro");
+
+    if (senha === "147") {
+        conteudo.classList.remove("hidden");
+        erro.style.display = "none";
+        window.scrollTo(0, 0);
+    } else {
+        erro.style.display = "block";
+    }
+}
+</script>
 
 </head>
 
@@ -93,33 +133,45 @@
 <h1>Verificação de Autenticidade</h1>
 <p style="text-align:center; color:#555;">Laudo de Avaliação Imobiliária</p>
 
+<!-- ÁREA DE SENHA -->
+<div class="box">
+    <label>Digite a senha de validação:</label>
+    <input type="password" id="senha" placeholder="Senha de acesso">
+    <button onclick="validarSenha()">Validar</button>
+    <p id="erro" style="color:#b30000; display:none; font-weight:bold; margin-top:10px;">Senha incorreta. Tente novamente.</p>
+</div>
+
+<!-- CONTEÚDO OCULTO ATÉ VALIDAR A SENHA -->
+<div id="conteudo" class="hidden">
+
 <h2>Dados do Avaliador</h2>
 <div class="box">
-    <p><span class="label">Nome:</span> José Augusto dos Santos Seixas</p>
-    <p><span class="label">Registro:</span> Avaliador Imobiliário – CRECI-RJ 105921-F</p>
-    <p><span class="label">Formação Complementar:</span> Curso CRECI Ed.310 – Avaliação Imobiliária</p>
+    <p><strong>Nome:</strong> José Augusto dos Santos Seixas</p>
+    <p><strong>Registro:</strong> Avaliador Imobiliário – CRECI-RJ 105921-F</p>
+    <p><strong>Formação Complementar:</strong> Curso CRECI Ed.310 – Avaliação Imobiliária</p>
 </div>
 
 <h2>Dados do Laudo</h2>
 <div class="box">
-    <p><span class="label">Identificação:</span> LAUDO-ICARAÍ-147-2025-SPOLETO</p>
-    <p><span class="label">Senha de Validação:</span> 147</p>
-    <p><span class="label">Status:</span> ✔ Documento Autenticado</p>
+    <p><strong>Identificação:</strong> LAUDO-ICARAÍ-147-2025-SPOLETO</p>
+    <p><strong>Status:</strong> ✔ Documento Autenticado</p>
 </div>
 
 <h2>Conclusão Técnica (Resumo)</h2>
 <div class="box">
     <p><strong>Valor Locatício Justo:</strong> R$ 14.000 a R$ 17.500</p>
     <p><strong>Valor Máximo Técnico:</strong> R$ 18.000</p>
-    <p>Reajuste para R$ 30.000 é desproporcional e sem base técnica.</p>
+    <p>Reajuste pretendido de R$ 30.000 é desproporcional e sem base técnica.</p>
 </div>
 
 <a href="Laudo_Avaliacao_Jose_Augusto.pdf" class="download-btn">
 📄 Baixar Laudo de Avaliação Completo (PDF)
 </a>
 
+</div>
+
 <footer>
-    Sistema de Autenticação – Augusto Seixas © 2025
+Sistema de Autenticação – Augusto Seixas © 2025
 </footer>
 
 </div>
